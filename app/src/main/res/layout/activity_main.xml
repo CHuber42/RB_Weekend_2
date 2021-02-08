@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_query"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search Query"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/rg_orientation"
+        android:inputType="text"
+        />
+
+    <RadioGroup
+        android:id="@+id/rg_orientation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/et_query">
+        <RadioButton
+            android:id="@+id/rb_landscape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Landscape"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:id="@+id/rb_portrait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Portrait"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:id="@+id/rb_square"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Square"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rg_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/rg_orientation">
+        <RadioButton
+            android:id="@+id/rb_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Less Than 4 MPs"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:id="@+id/rb_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Less Than 12 MPs"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:id="@+id/rb_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Less Than 24 MPs"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_per_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rg_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="number"
+        android:hint="Results per page (default: 10)"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/et_per_page"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="number"
+        android:hint="Page (default: 1)"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_fetch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fetch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_page" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

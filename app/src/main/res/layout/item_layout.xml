@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_id"
+        />
+
+<!--        private final int id;-->
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_id_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintTop_toBottomOf="@+id/iv_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_id" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_id_title"
+        app:layout_constraintStart_toEndOf="@id/tv_id_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="itemClicked"/>
+
+    <!--        private final int width;-->
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_width_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_id"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_width"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_width_title"
+        app:layout_constraintStart_toEndOf="@id/tv_id_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <!--        private final int height;-->
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_height_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_width"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_id"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_height_title"
+        app:layout_constraintStart_toEndOf="@id/tv_id_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+<!--        private final String url;-->
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_url_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_id"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_url_title"
+        app:layout_constraintStart_toEndOf="@id/tv_id_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+<!--        private final String photographer;-->
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_photographer_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_url"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_id"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_photographer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_photographer_title"
+        app:layout_constraintStart_toEndOf="@id/tv_id_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+<!--        private final String photographer_url;-->
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_photographer_url_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_photographer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_id"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_photographer_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_photographer_url_title"
+        app:layout_constraintStart_toEndOf="@id/tv_id_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+<!--        private final int photographer_id;-->
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_photographer_id_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_photographer_url"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_id"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_photographer_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_photographer_id_title"
+        app:layout_constraintStart_toEndOf="@id/tv_id_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+<!--        private final String avg_color;-->
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_color_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_photographer_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_id"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_color_title"
+        app:layout_constraintStart_toEndOf="@id/tv_id_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+<!--        private final PhotoSource src;-->
+<!--        private final boolean liked;-->
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_liked_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_id"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_liked"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_liked_title"
+        app:layout_constraintStart_toEndOf="@id/tv_id_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
